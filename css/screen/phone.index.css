@@ -1,9 +1,4 @@
 @media screen and (max-width: 500px) {
-    section#select #selector .selector-item {
-        margin: 1px;
-        font-size: 15px;
-        flex-basis: calc(50% - 10px);
-    }
 
     section#shop ul h1 {
         font-family: 5vmax;
