@@ -8,8 +8,4 @@
     .shop-item-desc {
         font-size: 2vmax;
     }
-
-    main {
-        flex-direction: column;
-    }
 }
