@@ -1,0 +1,250 @@
+/*
+    * Trankiulium Theme
+    * ZyDev_
+*/
+
+/* RESET */
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    text-rendering: optimizeSpeed;
+}
+
+/* LOADER */
+section#loader {
+    cursor: wait;
+    position: fixed;
+    z-index: 1000;
+    background-color: #000;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    animation: dispawn 2s ease-in-out;
+    animation-fill-mode: both;
+}
+
+span#load-message {
+    position: relative;
+    color: #333;
+    font-size: 10vmin;
+    letter-spacing: 5px;
+    border-bottom: 2.5vmin solid #333;
+    line-height: 1.5;
+    font-weight: bolder;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+span#load-message::before {
+    content: attr(data-text);
+    position: absolute;
+    font-weight: bold;
+    line-height: 1.5;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-size: 10vmin;
+    color: #f2ff00;
+    border-bottom: 2.5vmin solid #f2ff00;
+    border-radius: 5px;
+    animation: load 2s ease-in-out infinite;
+    overflow: hidden;
+}
+
+/* NAV */
+nav#menu {
+    max-width: 100vw;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav#menu #menu-title {
+    font-size: 5vmin;
+    padding: 10px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+/* HEADER */
+header {
+    height: max-content;
+    max-width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+    background: repeat url("../resources/pictures/obsidian.png");
+    border-bottom: 10px solid #000;
+}
+
+header span#title {
+    margin: 25px;
+    color: #fff;
+    z-index: inherit;
+    font-size: 9vmin;
+    letter-spacing: 5px;
+    padding: 10px;
+    background-color: #2424244f;
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(5px);
+    border-bottom: 10px solid #ff3d3d;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+header span#title::after {
+    content: "/pwarp ZyShop";
+    display: block;
+    font-size: 4vmin;
+    letter-spacing: 0px;
+}
+
+/* SELECT */
+section#select {
+    height: max-content;
+    max-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+section#select #selector {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+section#select #selector .selector-item {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height: max-content;
+    text-transform: uppercase;
+    padding: 10px;
+    background: repeat url("../resources/pictures/polished_blackstone.png");
+    border-radius: 10px;
+    margin: 5px;
+    font-size: 2.5vmax;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    transition: .5s all ease-in-out;
+}
+
+@media screen and (min-width: 500px) {
+    section#select #selector .selector-item:hover {
+        flex: 2;
+    }
+}
+
+/* MAIN */
+main {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-top: 5px solid #000;
+    background: repeat url("../resources/pictures/polished_blackstone_bricks.png");
+    border-radius: 10px;
+}
+
+main p {
+    flex: 1;
+    margin: 5px;
+    letter-spacing: 1px;
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 3.5vmin;
+    font-style: italic;
+}
+
+section#shop {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+}
+
+section#shop ul.buy {
+    flex: 1;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 10px;
+    min-width: 150px;
+    height: 100%;
+    background: repeat url("../resources/pictures/obsidian.png");
+}
+
+section#shop ul h1 {
+    color: #fff;
+    font-size: 5vmin;
+}
+
+.shop-item {
+    color: #fff;
+    font-size: 3vmin;
+    list-style-position: inside;
+}
+
+.shop-item-desc {
+    color: #fff;
+    list-style-position: inside;
+    margin-left: 10px;
+    font-size: 3vmin;
+    list-style-image: url("../resources/pictures/shop/Money.png");
+}
+
+/* FOOTER */
+footer span {
+    font-size: 3vmin;
+}
+
+/* KEYFRAMES */
+@keyframes load {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes dispawn {
+    0% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
